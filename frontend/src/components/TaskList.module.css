@@ -1,0 +1,19 @@
+/* Class for the list title */
+.listTitle {
+    font-family: var(--font-heading); /* Use the heading font */
+    font-size: 1.5rem; /* Adjust as needed */
+    margin-bottom: 1rem;
+}
+
+/* Class for the inner <div>, which is the item container */
+.itemContainer {
+    display: flex;
+    flex-direction: column; /* Align children in a column */
+    align-items: stretch; /* Stretch children horizontally */
+    width: 100%; /* Ensure full width */
+}
+
+/* Class for the outermost list container <div> */
+.listContainer {
+    margin-top: 3rem; /* Add top margin */
+}
