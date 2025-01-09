@@ -1,4 +1,6 @@
-import { InferSchemaType, Schema, model } from "mongoose";
+import mongoose, { InferSchemaType, Schema, model } from "mongoose";
+
+const { ObjectId } = mongoose.Schema.Types;
 
 const taskSchema = new Schema({
   title: { type: String, required: true },
@@ -10,6 +12,7 @@ const taskSchema = new Schema({
   // When we send a Task object in the JSON body of an API response, the date
   // will automatically get "serialized" into a standard date string.
   dateCreated: { type: Date, required: true },
+  assignee: { type: ObjectId, ref: "User" },
 });
 
 type Task = InferSchemaType<typeof taskSchema>;
